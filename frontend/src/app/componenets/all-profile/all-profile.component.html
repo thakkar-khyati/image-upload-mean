@@ -1,0 +1,18 @@
+<br>
+<br>
+<div class="container">
+    <h1>
+        All Profiles
+    </h1>
+    <hr>
+    <div *ngIf="profiles.length >0">
+        <div class="text-center" *ngFor="let profile of profiles">
+            <img [src]="profile.imagePath" [alt]="profile.name">
+            <div class="fw-bold fs-1">
+                <span>
+                    {{profile.name}}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

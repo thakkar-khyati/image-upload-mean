@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Create profile</h1>
+  <hr />
+  <form  [formGroup]="form" (submit)="onSubmit()">
+    <div class="m-3">
+      <input class="form-control" type="text" formControlName="name" placeholder="Enter name" />
+    </div>
+
+    <div class="m-3">
+      <input class="form-control"  type="file" (change)="onFileSelect($event)" />
+    </div>
+
+    <div *ngIf="imageData">
+      <img [src]="imageData" alt="form.value.name" />
+    </div>
+    <div class="m-3 text-center">
+      <button class="btn btn-primary" type="submit">Create Profile</button>
+    </div>
+  </form>
+</div>
